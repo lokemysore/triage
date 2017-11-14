@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Components</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row text-center">
+  <h1 style="font-size: 75px">Web Components</h1>
+  </div>
+  <div class="row text-center">
+	  <h3>Web Components === Write your own HTML tags & behaviours</h3>
+  </div>
+  <div class="row">
+	  <dl>
+	    <dt style="font-size: 45px; font-weight: 200">HTML Templates (w3c)</dt>
+	    <dd style="font-size: 25px"><span>
+	    <xmp>
+			<template id="myTemplate">
+				<img src="image.png">
+				<audio controls>
+					<source src="audio.ogg" type="audio/ogg">
+					<source src="audio.mp3" type="audio/mpeg">
+					Your browser does not support the audio tag.
+				</audio>
+			</template>
+			<script>
+			// Get the template content
+			var content = document.querySelector('#myTemplate').content;
+			// Modify if necessary
+			var img = content.querySelector('img');
+			img.src = "flowers.png";
+			// Append the content to DOM
+			document.body.appendChild(content.cloneNode());
+			</script>
+	    </xmp>
+	    <span></dd>
+	    <dt style="font-size: 45px; font-weight: 200">Shadow Dom (w3c)</dt>
+	    <dd style="font-size: 25px">-<span>Its hidden from the DOM<span></dd>
+	    <dd style="font-size: 25px"><span><p>Shadow DOM in simple terms will let you encapsulate markup, styles and scripts. This is one of the key piece of Object Oriented Programming, that restricts the visibility and accessibility of content/code of an Object to the Outside World.</p><span></dd>
+	    <dt style="font-size: 45px; font-weight: 200">Custom Elements (w3c)</dt>
+	    <dd style="font-size: 25px">-<span>HTML Templates + Shadow DOM = Custom Elements<span></dd>
+	    <dd style="font-size: 25px">-<span><xmp><custom-button> </custom-button></xmp><span></dd>
+	    <dt style="font-size: 45px; font-weight: 200">HTML Imports (w3c)</dt>
+	    <dd style="font-size: 25px"><span><xmp>
+	    <html>
+			<head>
+				<link rel="import" href="/templates/my-message.html">
+			</head> 
+			<body>
+				<my-message></my-message> 
+			</body>
+		</html>
+		</xmp>
+			<span></dd>
+	    <dt style="font-size: 45px; font-weight: 200">Example</dt>
+	    <dd style="font-size: 25px">-<span><a href="http://www.kaidez.com/samples/template-shadowdom-practice/" target="_blank" >http://www.kaidez.com/samples/template-shadowdom-practice/</a><span></dd>
+	    <dt style="font-size: 45px; font-weight: 200">Source</dt>
+	    <dd style="font-size: 25px">-<span><a href="http://thejackalofjavascript.com/web-components-future-web/" target="_blank" >http://thejackalofjavascript.com/web-components-future-web/</a><span></dd>
+	  </dl>    
+  </div>
+  <div class="row">
+  <div class="col-md-6 text-left"><a href="websockets.html">Previous</a></div>
+  <div class="col-md-6 text-right"><a href="thankyou.html">Next</a></div>
+  </div>
+  <div class="row text-center"> Presented By Lokesh</div>
+</div>
+</body>
+</html>
